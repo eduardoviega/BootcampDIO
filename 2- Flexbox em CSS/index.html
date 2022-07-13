@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flexbox</title>
+
+    <style>
+        /* ============================ Flex ============================ */
+        .flex{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+        }
+        .item{
+            background: aqua;
+            margin: 5px;
+        }
+        
+        /* ============================ Flex Direction ============================ */
+        .flex_container{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        .flex_item{
+            background: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row_reverse{
+            flex-direction: row-reverse;
+        }
+        .row_reverse li{
+            background: red;
+        }
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+        .column li{
+            background: orange;
+        }
+        .column_reverse{
+            float: right;
+            flex-direction: column-reverse;
+        }
+        .column_reverse li{
+            background: green;
+        }
+
+        /* ============================ Flex Wrap ============================ */
+        .flex_containerw{
+            display: flex;
+            height: 150px;
+        }
+        .itemw{
+            font-size: 24px;
+            width: 50%;
+            text-align: center ;
+            
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .orange{
+            background: lightsalmon;
+        }
+        .green{
+            background: lightgreen;
+        }
+        .blue{
+            background: lightblue;
+        }
+        </style>
+</head>
+<body>
+    <div style="display: none;">
+        <!-- ============================ Flex ============================ -->
+        <div class="flex">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <hr>
+
+        <!-- ============================ Flex Direction ============================ -->
+        <ul class="flex_container row">
+            <li class="flex_item">1</li>
+            <li class="flex_item">2</li>
+            <li class="flex_item">3</li>
+            <li class="flex_item">4</li>
+            <li class="flex_item">5</li>
+        </ul>
+
+        <ul class="flex_container row_reverse">
+            <li class="flex_item">1</li>
+            <li class="flex_item">2</li>
+            <li class="flex_item">3</li>
+            <li class="flex_item">4</li>
+            <li class="flex_item">5</li>
+        </ul>
+
+        <ul class="flex_container column">
+            <li class="flex_item">1</li>
+            <li class="flex_item">2</li>
+            <li class="flex_item">3</li>
+            <li class="flex_item">4</li>
+            <li class="flex_item">5</li>
+        </ul>
+
+        <ul class="flex_container column_reverse">
+            <li class="flex_item">1</li>
+            <li class="flex_item">2</li>
+            <li class="flex_item">3</li>
+            <li class="flex_item">4</li>
+            <li class="flex_item">5</li>
+        </ul>
+    </div>
+    <!-- ============================ Flex Wrap ============================ -->
+    <h1>no wrap</h1>
+
+    <div class="flex_containerw">
+        <div class="itemw orange">1</div>
+        <div class="itemw green">2</div>
+        <div class="itemw blue">3</div>
+    </div>
+    
+</body>
+</html>
