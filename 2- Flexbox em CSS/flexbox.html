@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flexbox</title>
+
+    <style>
+        /* ============================ Flex ============================ */
+        .flex{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+        }
+        .item{
+            background: aqua;
+            margin: 5px;
+        }
+        
+        /* ============================ Flex Direction ============================ */
+        .flex_container{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        .flex_item{
+            background: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row_reverse{
+            flex-direction: row-reverse;
+        }
+        .row_reverse li{
+            background: red;
+        }
+        .column{
+            float: left;
+            flex-direction: column;
+        }
+        .column li{
+            background: orange;
+        }
+        .column_reverse{
+            float: right;
+            flex-direction: column-reverse;
+        }
+        .column_reverse li{
+            background: green;
+        }
+
+        /* ============================ Flex Wrap ============================ */
+        .flex_containerw{
+            display: flex;
+            flex-direction: row;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 300px;
+        }
+        .itemw{
+            font-size: 24px;
+            height: 50%;
+            text-align: center ;
+            MIN-width: 100px;
+            line-height: 60px;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .wrapreverse{
+            flex-wrap: wrap-reverse;
+        }
+        .orange{
+            background: lightsalmon;
+        }
+        .green{
+            background: lightgreen;
+        }
+        .blue{
+            background: lightblue;
+        }
+
+
+
+
+
+
+
+        /* ============================ Flex Wrap ============================ */
+        .flex_containerf{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+            margin-bottom: 10px;
+        }
+        .default{
+            flex-flow: row nowrap;
+        }
+        .wrap{
+            flex-flow: row wrap;
+        }
+        .wrap-reverse{
+            flex-flow: row wrap-reverse;
+        }
+        .r-nowrap{
+            flex-flow: row-reverse nowrap;
+        }
+        .r-wrap{
+            flex-flow: row-reverse wrap;
+        }
+        .rr-wrap{
+            flex-flow: row-reverse wrap-reverse;
+        }
+        .itemf{
+            background: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div style="">
+        <div style="display: flow-root;">
+            <!-- ============================ Flex ============================ -->
+            <div class="flex">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+            <hr>
+
+            <!-- ============================ Flex Direction ============================ -->
+            <ul class="flex_container row">
+                <li class="flex_item">1</li>
+                <li class="flex_item">2</li>
+                <li class="flex_item">3</li>
+                <li class="flex_item">4</li>
+                <li class="flex_item">5</li>
+            </ul>
+
+            <ul class="flex_container row_reverse">
+                <li class="flex_item">1</li>
+                <li class="flex_item">2</li>
+                <li class="flex_item">3</li>
+                <li class="flex_item">4</li>
+                <li class="flex_item">5</li>
+            </ul>
+
+            <ul class="flex_container column">
+                <li class="flex_item">1</li>
+                <li class="flex_item">2</li>
+                <li class="flex_item">3</li>
+                <li class="flex_item">4</li>
+                <li class="flex_item">5</li>
+            </ul>
+
+            <ul class="flex_container column_reverse">
+                <li class="flex_item">1</li>
+                <li class="flex_item">2</li>
+                <li class="flex_item">3</li>
+                <li class="flex_item">4</li>
+                <li class="flex_item">5</li>
+            </ul>
+        </div>
+        <!-- ============================ Flex Wrap ============================ -->
+        <h1>no wrap</h1>
+        <div class="flex_containerw nowrap">
+            <div class="itemw orange">1</div>
+            <div class="itemw green">2</div>
+            <div class="itemw blue">3</div>
+            <div class="itemw orange">3</div>
+        </div>
+
+        <h1>wrap</h1>
+        <div class="flex_containerw wrap">
+            <div class="itemw orange">1</div>
+            <div class="itemw green">2</div>
+            <div class="itemw blue">3</div>
+            <div class="itemw orange">3</div>
+        </div>
+        
+        <h1>wrap reverse</h1>
+        <div class="flex_containerw wrapreverse">
+            <div class="itemw orange">1</div>
+            <div class="itemw green">2</div>
+            <div class="itemw blue">3</div>
+            <div class="itemw orange">3</div>
+        </div>
+    </div>
+
+    <!-- ============================ Flex Flow ============================ -->
+    <h1>Default: row nowrap</h1>
+    <div class="flex_containerf default">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+    </div>
+    
+    <h1>Wrap:</h1>
+    <div class="flex_containerf wrap">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+    </div>
+    
+    <h1>Wrap reverse:</h1>
+    <div class="flex_containerf wrap-reverse">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+    </div>
+    
+    <h1>Row-reverse nowrap:</h1>
+    <div class="flex_containerf r-nowrap">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+        <div class="itemf">6</div>
+        <div class="itemf">7</div>
+    </div>
+    
+    <h1>Row-reverse wrap:</h1>
+    <div class="flex_containerf r-wrap">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+        <div class="itemf">6</div>
+        <div class="itemf">7</div>
+    </div>
+
+    <h1>Row-reverse wrap-reverse:</h1>
+    <div class="flex_containerf rr-wrap">
+        <div class="itemf">1</div>
+        <div class="itemf">2</div>
+        <div class="itemf">3</div>
+        <div class="itemf">4</div>
+        <div class="itemf">5</div>
+        <div class="itemf">6</div>
+        <div class="itemf">7</div>
+    </div>
+
+</body>
+</html>
