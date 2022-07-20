@@ -1,24 +1,17 @@
 {
-  "name": "dioproject",
+  "name": "aula-dio",
   "version": "1.0.0",
-  "description": "- Repositório criado para o desafio de projeto Git/GitHub.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EduardoViega/DIOProject.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "watch": "tsc --watch"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EduardoViega/DIOProject/issues"
-  },
-  "homepage": "https://github.com/EduardoViega/DIOProject#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.5"
+    "lite-server": "^2.6.1"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

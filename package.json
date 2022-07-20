@@ -1,0 +1,22 @@
+{
+  "name": "dioproject",
+  "version": "1.0.0",
+  "description": "- Repositório criado para o desafio de projeto Git/GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoViega/DIOProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoViega/DIOProject/issues"
+  },
+  "homepage": "https://github.com/EduardoViega/DIOProject#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
